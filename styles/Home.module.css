@@ -161,6 +161,7 @@
 }
 
 .form input {
+  color:#fff;
   font-size: 1.2rem;
   padding: 12px 20px;
   width: 70%;
@@ -175,6 +176,7 @@
 .form input:focus {
   color:#fff;
   outline: 0;
+  border:0;
   box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
 }
 
@@ -183,6 +185,7 @@
  font-weight: normal;
  font-style: italic;
  padding-left: 10px;
+ font-size:1rem;
 }
 
 .form input:-moz-placeholder {
@@ -205,16 +208,16 @@
   cursor: pointer;
   font-size:50px;
   padding:0 15px;
-  font: 13px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  font: 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
   color: #fff;
   text-transform: uppercase;
   border-radius: 40px;
-  background:transparent;
+  background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
   border:none;
 }  
 
 .form button:hover{    
-    background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+    background: linear-gradient(90deg, #4a064f 0%, #b8143a 100%, #ad1337 100%);
 }  
 
 @media (max-width: 600px) {

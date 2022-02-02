@@ -16,7 +16,12 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>Github Stars</h1>
         <p className={styles.description}>Find out who starred your repo✨</p>
         <form className={styles.form}>
-          <input id="name" name="name" type="text" placeholder="Enter github repository" required />
+          <input 
+            id="name" 
+            name="name" 
+            type="text" 
+            placeholder="Enter github repository" 
+            required/>
           <button>Submit</button>
         </form>
         <div className={styles.line}>
