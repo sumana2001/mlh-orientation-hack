@@ -2,8 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: radial-gradient(92.01% 92.01% at 50% 7.99%,#231e43 0,#191630 86.98%,#15103e 100%);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color:#fff;
 }
 
 a {
