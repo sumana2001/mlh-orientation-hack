@@ -38,30 +38,6 @@
   font-size: 1.5rem;
 }
 
-.input {
-  font-size: 1.2rem;
-  width: 100%;
-  padding: 12px 20px;
-  display: inline-block;
-  border: 1px solid #fff;
-  border-radius: 12px;
-  box-sizing: border-box;
-  background:transparent;
-  min-width:20vw;
-  margin-bottom:1rem;
-}
-
-.input::placeholder{
-  color:#fff;
-}
-
-.input:focus::placeholder {
-  color: transparent;
-}
-
-.input:focus {
-  outline:none;
-}
 .line{
   display: block;
     width: calc(100% + 1.25rem);
@@ -176,6 +152,71 @@
   transform: scale(1.1);
 }
 
+.form {
+  border-radius: 40px;
+  border: 1px solid #fff;
+  background: transparent;
+  margin-bottom:1rem;
+  min-width:25vw;
+}
+
+.form input {
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  width: 70%;
+  float: left;   
+  font: bold 13px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  border: 0;
+  background: transparent;
+  border-radius: 40px;
+  border-top-style: none;
+}
+
+.form input:focus {
+  color:#fff;
+  outline: 0;
+  box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
+}
+
+.form input::-webkit-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+ padding-left: 10px;
+}
+
+.form input:-moz-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.form input:-ms-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+  border-style: none;
+}   
+
+.form button {
+  overflow: visible;
+  position: relative;
+  float: right;
+  cursor: pointer;
+  font-size:50px;
+  padding:0 15px;
+  font: 13px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 40px;
+  background:transparent;
+  border:none;
+}  
+
+.form button:hover{    
+    background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+}  
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -183,5 +224,8 @@
   }
   .card{
     margin:10px auto;
+  }
+  .form{
+    min-width:80vw;
   }
 }
