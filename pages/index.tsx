@@ -22,12 +22,12 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.grid}>
           <a href="https://github.com/sumana2001">
-            <figure class={styles.card}>
-              <div class={styles.image}>
+            <figure className={styles.card}>
+              <div className={styles.image}>
                 <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
               </div>
               <figcaption>
-                <div class={styles.star}>&#9733;</div>
+                <div className={styles.star}>&#9733;</div>
                 <h3>Sumana Basu</h3>
                 <p>sumana2001</p>
               </figcaption>
@@ -35,12 +35,12 @@ const Home: NextPage = () => {
           </a>
 
           <a href="https://github.com/sumana2001">
-            <figure class={styles.card}>
-              <div class={styles.image}>
+            <figure className={styles.card}>
+              <div className={styles.image}>
                 <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
               </div>
               <figcaption>
-                <div class={styles.star}>&#9733;</div>
+                <div className={styles.star}>&#9733;</div>
                 <h3>Sumana Basu</h3>
                 <p>sumana2001</p>
               </figcaption>
@@ -48,12 +48,12 @@ const Home: NextPage = () => {
           </a>
 
           <a href="https://github.com/sumana2001">
-            <figure class={styles.card}>
-              <div class={styles.image}>
+            <figure className={styles.card}>
+              <div className={styles.image}>
                 <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
               </div>
               <figcaption>
-                <div class={styles.star}>&#9733;</div>
+                <div className={styles.star}>&#9733;</div>
                 <h3>Sumana Basu</h3>
                 <p>sumana2001</p>
               </figcaption>
@@ -61,12 +61,12 @@ const Home: NextPage = () => {
           </a>
 
           <a href="https://github.com/sumana2001">
-            <figure class={styles.card}>
-              <div class={styles.image}>
+            <figure className={styles.card}>
+              <div className={styles.image}>
                 <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
               </div>
               <figcaption>
-                <div class={styles.star}>&#9733;</div>
+                <div className={styles.star}>&#9733;</div>
                 <h3>Sumana Basu</h3>
                 <p>sumana2001</p>
               </figcaption>
