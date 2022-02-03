@@ -2,8 +2,38 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { gql } from "@apollo/client";
+import client from "../apollo-client";
+import { ReactChild, ReactFragment, ReactPortal } from 'react';
 
-const Home: NextPage = () => {
+export async function getServerSideProps() {
+  const { data } = await client.query({
+    query: gql`
+      query Stars{
+  repository(name: "theregina", owner: "sumana2001") {
+    stargazers(first: 10) {
+      edges {
+        node {
+          id
+          name
+          avatarUrl
+          login
+        }
+      }
+    }
+  }
+}
+    `,
+  });
+
+  return {
+    props: {
+      stars: data.repository.stargazers.edges,
+    },
+  };
+}
+
+const Home: NextPage = ({stars}:any) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,57 +57,20 @@ const Home: NextPage = () => {
         <div className={styles.line}>
         </div>
         <div className={styles.grid}>
-          <a href="https://github.com/sumana2001">
+        {stars.map((star:any) => (
+          <a href={"https://github.com/"+star.node.login}>
             <figure className={styles.card}>
               <div className={styles.image}>
-                <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
+                <img src={star.node.avatarUrl} alt="profile-img"/>
               </div>
               <figcaption>
                 <div className={styles.star}>&#9733;</div>
-                <h3>Sumana Basu</h3>
-                <p>sumana2001</p>
+                <h3>{star.node.name}</h3>
+                <p>{star.node.login}</p>
               </figcaption>
             </figure>
           </a>
-
-          <a href="https://github.com/sumana2001">
-            <figure className={styles.card}>
-              <div className={styles.image}>
-                <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
-              </div>
-              <figcaption>
-                <div className={styles.star}>&#9733;</div>
-                <h3>Sumana Basu</h3>
-                <p>sumana2001</p>
-              </figcaption>
-            </figure>
-          </a>
-
-          <a href="https://github.com/sumana2001">
-            <figure className={styles.card}>
-              <div className={styles.image}>
-                <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
-              </div>
-              <figcaption>
-                <div className={styles.star}>&#9733;</div>
-                <h3>Sumana Basu</h3>
-                <p>sumana2001</p>
-              </figcaption>
-            </figure>
-          </a>
-
-          <a href="https://github.com/sumana2001">
-            <figure className={styles.card}>
-              <div className={styles.image}>
-                <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
-              </div>
-              <figcaption>
-                <div className={styles.star}>&#9733;</div>
-                <h3>Sumana Basu</h3>
-                <p>sumana2001</p>
-              </figcaption>
-            </figure>
-          </a>
+          ))}
         </div>
       </main>
 
