@@ -5,7 +5,7 @@ export default function UserList() {
     let context = useContext(DataContext)
     return (
         <>
-           {context.state?.name}
+           <div>{context.state?.name}</div>
             {context.state?.info?.map((user: any, key: any) => <User key={key} data={user} />)}
         </>
     )
