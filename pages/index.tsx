@@ -30,7 +30,7 @@ const Home: NextPage = () => {
   const client = new ApolloClient({
     uri: 'https://api.github.com/graphql',
     headers:{
-      authorization: `Bearer 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`,
+      authorization: `Bearer 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`,
     },
     cache: new InMemoryCache()
   });
