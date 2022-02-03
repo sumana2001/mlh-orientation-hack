@@ -25,13 +25,14 @@ npm install -g create-next-app
 ```
 ## Steps for Cloning and Running the Application locally :footprints: :footprints:
 
-- Clone the project locally with the following command:
+- **Clone the project**: <br>
+Run the following command in your terminal to clone the project locally:
 ```bash
 git clone https://github.com/sumana2001/mlh-orientation-hack.git
 ```
-- Install all the packages: <br>
-Go into the project's directory in your OS. Open your terminal in the project's directory and type the following command to install all packages:
+- **Install all the packages**: <br>
+After cloning the project, it should be saved in your Local Machine. Next, Open your terminal and `cd` (Change Directory) into the project's directory in your Local Machine. Then, type the following command to install all the packages needed for the application to run:
 
 ```bash
-yarn
+yarn install
 ```
