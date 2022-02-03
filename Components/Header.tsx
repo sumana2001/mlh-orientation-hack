@@ -28,6 +28,7 @@ export default function Header() {
         let parseUrl = new URL(url).pathname.trim().split("/")
         let owner = parseUrl[1]
         let name = parseUrl[2]
+        console.log(owner,name)
         try {
             const { data } = await client.query({
                 query,
