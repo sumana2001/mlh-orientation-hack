@@ -33,11 +33,12 @@ const reducer = (state:{name?:string,info?:[]}, action:any) => {
 };
 export const DataContext = createContext<IDataContext>({});
 const Home: NextPage = () => {
+  const token=process.env.NEXT_PUBLIC_TOKEN;
   const [state, dispatch] = useReducer(reducer, {});
   const client = new ApolloClient({
     uri: 'https://api.github.com/graphql',
     headers:{
-      authorization: 'Bearer ' + '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',
+      authorization: 'Bearer ' + token,
     },
     cache: new InMemoryCache()
   });
