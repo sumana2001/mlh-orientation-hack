@@ -1,10 +1,43 @@
-import type { NextPage } from 'next'
+import  { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import { createContext, useReducer } from 'react'
+import Header from '../Components/Header'
+import Line from '../Components/Line'
+import UserList from '../Components/UserList'
 import styles from '../styles/Home.module.css'
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client";
 
+interface IDataContext {
+  state?:[]
+  dispatch?: ({type,data}:any)=>void
+}
+
+const reducer = (state:[], action:any) => {
+  switch (action.type) {
+    case "DATA":
+      return action.data;
+    default:
+      return state;
+  }
+};
+export const DataContext = createContext<IDataContext>({});
 const Home: NextPage = () => {
+  const [state, dispatch] = useReducer(reducer, []);
+  const client = new ApolloClient({
+    uri: 'https://api.github.com/graphql',
+    headers:{
+      authorization: `Bearer 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`,
+    },
+    cache: new InMemoryCache()
+  });
+  let value = {state,dispatch}
   return (
+    <ApolloProvider client={client}>
+    <DataContext.Provider value = {value}>
     <div className={styles.container}>
       <Head>
         <title>Github Stars</title>
@@ -13,76 +46,17 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Github Stars</h1>
-        <p className={styles.description}>Find out who starred your repo✨</p>
-        <form className={styles.form}>
-          <input 
-            id="name" 
-            name="name" 
-            type="text" 
-            placeholder="Enter github repository" 
-            required/>
-          <button>Submit</button>
-        </form>
-        <div className={styles.line}>
-        </div>
+      <Header/>
+       <Line/>
         <div className={styles.grid}>
-          <a href="https://github.com/sumana2001">
-            <figure className={styles.card}>
-              <div className={styles.image}>
-                <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
-              </div>
-              <figcaption>
-                <div className={styles.star}>&#9733;</div>
-                <h3>Sumana Basu</h3>
-                <p>sumana2001</p>
-              </figcaption>
-            </figure>
-          </a>
-
-          <a href="https://github.com/sumana2001">
-            <figure className={styles.card}>
-              <div className={styles.image}>
-                <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
-              </div>
-              <figcaption>
-                <div className={styles.star}>&#9733;</div>
-                <h3>Sumana Basu</h3>
-                <p>sumana2001</p>
-              </figcaption>
-            </figure>
-          </a>
-
-          <a href="https://github.com/sumana2001">
-            <figure className={styles.card}>
-              <div className={styles.image}>
-                <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
-              </div>
-              <figcaption>
-                <div className={styles.star}>&#9733;</div>
-                <h3>Sumana Basu</h3>
-                <p>sumana2001</p>
-              </figcaption>
-            </figure>
-          </a>
-
-          <a href="https://github.com/sumana2001">
-            <figure className={styles.card}>
-              <div className={styles.image}>
-                <img src="https://avatars.githubusercontent.com/u/63084088?v=4" alt="profile-img"/>
-              </div>
-              <figcaption>
-                <div className={styles.star}>&#9733;</div>
-                <h3>Sumana Basu</h3>
-                <p>sumana2001</p>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
+          <UserList/>
+          </div>
       </main>
 
       <footer className={styles.footer}>Made with &hearts;</footer>
     </div>
+    </DataContext.Provider>
+    </ApolloProvider>
   )
 }
 
