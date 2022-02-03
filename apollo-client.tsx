@@ -5,6 +5,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   headers: {
     Authorization: "Bearer " + process.env.token,
+    "Access-Control-Allow-Credentials" : "true"
   },
 });
 
