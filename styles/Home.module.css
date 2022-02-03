@@ -57,7 +57,9 @@
   max-width: 800px;
   padding:1rem;
 }
-
+.topic{
+  grid-column: 1 / span 2;
+}
 .card {
   text-align: left;
   color: inherit;
