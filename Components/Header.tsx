@@ -7,17 +7,18 @@ export default function Header() {
     let { dispatch } = useContext(DataContext)
     const client = useApolloClient();
     let query = gql`
-        query { 
-            repository(name:"manifest-server-graphql",owner:"sammychinedu2ky"){
-            stargazers(first:100){
-                nodes{
-                  name
-                  avatarUrl
-                  login
-                }
-              }
+    query($name:String!,$owner:String!) { 
+        repository(name:$name,owner:$owner){
+        stargazers(first:100){
+            nodes{
+              name
+              avatarUrl
+              login
+              
             }
-            }`
+          }
+        }
+        }`
 
 
     let handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
@@ -27,7 +28,7 @@ export default function Header() {
         let parseUrl = new URL(url).pathname.trim().split("/")
         let owner = parseUrl[1]
         let name = parseUrl[2]
-
+        console.log(owner,name)
         try {
             const { data } = await client.query({
                 query,
@@ -36,8 +37,8 @@ export default function Header() {
            
             dispatch?.({type:"DATA", data: data.repository.stargazers.nodes})
             setInput('')
-        } catch {
-            alert('An error occured')
+        } catch(error) {
+            alert(error)
         }
        
       
