@@ -5,7 +5,7 @@ This application was inspired by the MLH Orientation Hack organized by the [MLH 
 The Team saw the need to build an application that many Github users will find useful, beneficial and fun to use. <br>
 
 # What is it:question:
-Github Stars is a software application that allows Github Users enter their Github repository link and see the Profile Picture(s) and name(s) of the number of Github Users that have starred their projects. The Github Stars application was built with Next.js and [Github Graphql API](https://docs.github.com/en/graphql).
+Github Stars is a software application that allows Github Users enter their Github repository link and see the Profile Picture(s) and name(s) of the number of Github Users that have starred their projects. The Github Stars application was built with [Next.js](https://nextjs.org/) and [Github Graphql API](https://docs.github.com/en/graphql).
 
 # Team :people_holding_hands:
 <table>
@@ -22,4 +22,10 @@ Install create-next-app npm package globally. This will help to easily run the p
 
 ```bash
 npm install -g create-next-app
+```
+## Cloning and Running the Application in local 💻
+
+Clone the project in localhost
+```bash
+git clone https://github.com/sumana2001/mlh-orientation-hack.git
 ```
