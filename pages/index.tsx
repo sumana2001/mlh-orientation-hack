@@ -1,28 +1,26 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
-import { ReactChild, ReactFragment, ReactPortal } from 'react';
 
 export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
-      query Stars{
-  repository(name: "theregina", owner: "sumana2001") {
-    stargazers(first: 10) {
-      edges {
-        node {
-          id
-          name
-          avatarUrl
-          login
+      query Stars {
+        repository(name: "theregina", owner: "sumana2001") {
+          stargazers(first: 10) {
+            edges {
+              node {
+                id
+                name
+                avatarUrl
+                login
+              }
+            }
+          }
         }
       }
-    }
-  }
-}
     `,
   });
 
@@ -33,7 +31,7 @@ export async function getServerSideProps() {
   };
 }
 
-const Home: NextPage = ({stars}:any) => {
+const Home: NextPage = ({ stars }: any) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -46,37 +44,39 @@ const Home: NextPage = ({stars}:any) => {
         <h1 className={styles.title}>Github Stars</h1>
         <p className={styles.description}>Find out who starred your repo✨</p>
         <form className={styles.form}>
-          <input 
-            id="name" 
-            name="name" 
-            type="text" 
-            placeholder="Enter github repository" 
-            required/>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter github repository"
+            required
+          />
           <button>Submit</button>
         </form>
-        <div className={styles.line}>
-        </div>
+        <div className={styles.line}></div>
         <div className={styles.grid}>
-        {stars.map((star:any) => (
-          <a href={"https://github.com/"+star.node.login}>
-            <figure className={styles.card}>
-              <div className={styles.image}>
-                <img src={star.node.avatarUrl} alt="profile-img"/>
-              </div>
-              <figcaption>
-                <div className={styles.star}>&#9733;</div>
-                <h3>{star.node.name}</h3>
-                <p>{star.node.login}</p>
-              </figcaption>
-            </figure>
-          </a>
+          {stars.map((star: any) => (
+            <div key={star.node.id}>
+              <a href={"https://github.com/" + star.node.login}>
+                <figure className={styles.card}>
+                  <div className={styles.image}>
+                    <img src={star.node.avatarUrl} alt="profile-img" />
+                  </div>
+                  <figcaption>
+                    <div className={styles.star}>&#9733;</div>
+                    <h3>{star.node.name}</h3>
+                    <p>{star.node.login}</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </div>
           ))}
         </div>
       </main>
 
       <footer className={styles.footer}>Made with &hearts;</footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
