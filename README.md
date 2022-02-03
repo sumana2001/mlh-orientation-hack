@@ -36,3 +36,12 @@ After cloning the project, it should be saved in your Local Machine. Next, Open 
 ```bash
 yarn install
 ```
+**Run the development server**
+Use the following command to run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+## How we built it :smiley:
+We used Next.js as the frontend frontend framwework of our web application and we used Typescript. We also used Github Graphql API in place of REST API to learn more about the GraphQL ecosystem and technology. Then, we made use of Apollo Client as the library to enable us easily interact with Github GraphQL API. We had to obtain a Github access to make use of the Github GraphQL API. 
