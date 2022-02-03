@@ -9,6 +9,7 @@ export default function Header() {
     let query = gql`
     query($name:String!,$owner:String!) { 
         repository(name:$name,owner:$owner){
+        name
         stargazers(first:100){
             nodes{
               name
@@ -35,7 +36,7 @@ export default function Header() {
                 variables: { owner, name },
             });
            
-            dispatch?.({type:"DATA", data: data.repository.stargazers.nodes})
+            dispatch?.({type:"DATA",name:data.repository.name, data: data.repository.stargazers.nodes})
             setInput('')
         } catch(error) {
             alert(error)

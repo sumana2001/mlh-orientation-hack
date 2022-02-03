@@ -12,25 +12,32 @@ import {
 } from "@apollo/client";
 
 interface IDataContext {
-  state?:[]
+  state?:{
+    name?:string,
+    info?:[]
+  },
   dispatch?: ({type,data}:any)=>void
 }
 
-const reducer = (state:[], action:any) => {
+const reducer = (state:{name?:string,info?:[]}, action:any) => {
   switch (action.type) {
     case "DATA":
-      return action.data;
+      let newState ={
+        name:action.name,
+        info:action.data
+      }
+      return newState;
     default:
       return state;
   }
 };
 export const DataContext = createContext<IDataContext>({});
 const Home: NextPage = () => {
-  const [state, dispatch] = useReducer(reducer, []);
+  const [state, dispatch] = useReducer(reducer, {});
   const client = new ApolloClient({
     uri: 'https://api.github.com/graphql',
     headers:{
-      authorization: 'Bearer ' + process.env.token,
+      authorization: 'Bearer ' + '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',
     },
     cache: new InMemoryCache()
   });
