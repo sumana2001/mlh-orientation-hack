@@ -1,7 +1,7 @@
 ![GITHUB STARS](https://i.postimg.cc/2j2q6ZCX/Github-Stars-Image.jpg) 
 # Inspiration :bulb:
 
-This application was inspired by the MLH Orientation Hack organized by the [MLH Fellowship](https://fellowship.mlh.io/programs/open-source) 2022 Spring Batch. The [Synthesis](https://www.synthesis.is/) Team of three(3) came up with idea to build this application called [Github Stars](https://mlh-orientation-hack.vercel.app/) during a four(4) days Hackathon.
+This application was inspired by the MLH Orientation Hack organized by the [MLH Fellowship](https://fellowship.mlh.io/programs/open-source) 2022 Spring Batch. The [Synthesis](https://www.synthesis.is/) Team of three(3) came up with an idea to build this application called [Github Stars](https://mlh-orientation-hack.vercel.app/) during a four(4) days Hackathon.
 The Team saw the need to build an application that many Github users will find useful, beneficial and fun to use. <br>
 
 # What is it:question:
@@ -17,15 +17,21 @@ Github Stars is a software application that allows Github Users enter their Gith
 
 ## Prerequisites :technologist:
 
-### Install create-next-app
-Install create-next-app npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-next-app
+### Install The `create-next-app` Package
+Open your Terminal to install the `create-next-app` npm package globally on your local machine. The `create-next-app` package enables you to run the project and build the source files. To install the `create-next-app` package, run the following command:
 
 ```bash
 npm install -g create-next-app
 ```
-## Cloning and Running the Application in local 💻
+## Steps for Cloning and Running the Application locally :footprints: :footprints:
 
-Clone the project in localhost
+- Clone the project locally with the following command:
 ```bash
 git clone https://github.com/sumana2001/mlh-orientation-hack.git
+```
+- Install all the packages: <br>
+Go into the project's directory in your OS. Open your terminal in the project's directory and type the following command to install all packages:
+
+```bash
+yarn
 ```
