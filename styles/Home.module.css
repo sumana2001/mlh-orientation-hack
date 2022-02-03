@@ -57,8 +57,12 @@
   max-width: 800px;
   padding:1rem;
 }
-.topic{
-  grid-column: 1 / span 2;
+.grid:not(:first-child) {
+  flex: 1;
+}
+
+.grid:nth-child(1) {
+  width: 100%;
 }
 .card {
   text-align: left;
