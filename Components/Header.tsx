@@ -9,7 +9,7 @@ export default function Header() {
     let query = gql`
     query($name:String!,$owner:String!) { 
         repository(name:$name,owner:$owner){
-        name
+        nameWithOwner
         url
         stargazerCount
         stargazers(first:100){
@@ -38,7 +38,7 @@ export default function Header() {
                 variables: { owner, name },
             });
            
-            dispatch?.({type:"DATA",name:data.repository.name, url:data.repository.url, stargazerCount:data.repository.stargazerCount, data: data.repository.stargazers.nodes})
+            dispatch?.({type:"DATA", nameWithOwner:data.repository.nameWithOwner, url:data.repository.url, stargazerCount:data.repository.stargazerCount, data: data.repository.stargazers.nodes})
             setInput('')
         } catch(error) {
             alert(error)

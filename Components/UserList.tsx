@@ -6,9 +6,10 @@ export default function UserList() {
     let context = useContext(DataContext)
     return (
         <>
-           <div className={styles.name}>
-               {context.state?.name}
-           </div>
+           <h1 className={styles.name}>
+               {context.state?.nameWithOwner}
+           </h1>
+           <br/>
            <div className={styles.url}>{context.state?.url}</div>
            <div className={styles.count}>{context.state?.stargazerCount}</div>
            <br/>
