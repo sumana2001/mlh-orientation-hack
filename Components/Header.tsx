@@ -10,6 +10,8 @@ export default function Header() {
     query($name:String!,$owner:String!) { 
         repository(name:$name,owner:$owner){
         name
+        url
+        stargazerCount
         stargazers(first:100){
             nodes{
               name
@@ -36,7 +38,7 @@ export default function Header() {
                 variables: { owner, name },
             });
            
-            dispatch?.({type:"DATA",name:data.repository.name, data: data.repository.stargazers.nodes})
+            dispatch?.({type:"DATA",name:data.repository.name, url:data.repository.url, stargazerCount:data.repository.stargazerCount, data: data.repository.stargazers.nodes})
             setInput('')
         } catch(error) {
             alert(error)

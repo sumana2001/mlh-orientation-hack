@@ -13,17 +13,21 @@ import {
 
 interface IDataContext {
   state?:{
-    name?:string,
+    name?:String,
+    url?:String,
+    stargazerCount?:Number,
     info?:[]
   },
   dispatch?: ({type,data}:any)=>void
 }
 
-const reducer = (state:{name?:string,info?:[]}, action:any) => {
+const reducer = (state:{name?:String,url?:String,stargazerCount?:Number,info?:[]}, action:any) => {
   switch (action.type) {
     case "DATA":
       let newState ={
         name:action.name,
+        url:action.url,
+        stargazerCount:action.stargazerCount,
         info:action.data
       }
       return newState;
