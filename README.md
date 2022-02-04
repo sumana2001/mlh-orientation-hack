@@ -81,6 +81,6 @@ All the technologies, be it NextJs, GraphQL or Typescript, were very new to us. 
 ## What's next for Github Stars 💫
 Going ahead, the Github Stars will have a lot of new features like providing much more information regarding forks, deployments and so on of the repositories. We will also include a direct option of sharing the stars to various social media platforms like Twitter, LinkedIn and so on. Lastly, we also plan on creating a leaderboard that motivates the users to continue creating amazing projects.
 
-## Important Links
+## Important Links 🔗
 - Live website: https://mlh-orientation-hack.vercel.app/
 - Youtube link: https://youtu.be/Qm76tAKZcJo
