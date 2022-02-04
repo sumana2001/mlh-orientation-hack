@@ -10,7 +10,7 @@ export default function UserList() {
         <h1 className={styles.name}>
           {context.state?.nameWithOwner}
           <div className={styles.count}>
-            How many stars? {context.state?.stargazerCount}
+            See your number of stars! {context.state?.stargazerCount}
           </div>
         </h1>
       </a>
