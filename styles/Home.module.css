@@ -54,16 +54,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
-  padding:1rem;
-}
-.grid:not(:first-child) {
-  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.grid:nth-child(1) {
-  width: 100%;
-}
+
 .card {
   text-align: left;
   color: inherit;
@@ -90,7 +85,7 @@
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
   vertical-align: top;
   position: relative;
 }
@@ -226,6 +221,10 @@
 .form button:hover{    
     background: linear-gradient(90deg, #4a064f 0%, #b8143a 100%, #ad1337 100%);
 }  
+
+.name{
+  
+}
 
 @media (max-width: 600px) {
   .grid {
