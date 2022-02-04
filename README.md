@@ -6,12 +6,13 @@
 ![Screenshot 2022-02-04 at 12 51 25 PM](https://user-images.githubusercontent.com/63084088/152488382-137ef28b-ae41-4586-9f07-8d3a9bd8b09b.png)
 
 ## Inspiration ⚡
+'Stargazers' are a public list of GitHub users that have starred (essentially bookmarked) your repository and is a rough indicator of engagement. People either want to use your code, or at least not forget the link to follow up on it another time. It is a good measure to see how useful or inspiring your project is. We wanted users to get their due appreciation and be able to see everyone who has contributed to their reach by starring the repository. 
 
 ## What it does❓
 GitHub Stars is a web application that allows GitHub users to enter their Github repository link and view the people who have starred their projects. You can also see the number of total stargazers, along with link to each stargazers's profile. Since the number of stargazers can be infinite, we display only the profiles of the first 100 stargazers in alphabetical order.
 
 ## How we built it 👷‍♀️
-We used Next.js as the Frontend Framwework of our web application and we used Typescript. We also used Github Graphql API in place of REST API to learn more about the GraphQL ecosystem and technology. Then, we made use of Apollo Client as the library to enable us easily interact with Github GraphQL API. We had to obtain a Github access to make use of the Github GraphQL API. 
+We used Next.js as the Frontend Framwework of our web application and we used Typescript. We also used Github Graphql API in place of REST API to learn more about the GraphQL ecosystem and technology. Then, we made use of Apollo Client as the library to enable us easily interact with Github GraphQL API. We had to obtain a Github personal access token to make use of the Github GraphQL API. 
 
 ## Prerequisites🧑🏻‍💻
 
