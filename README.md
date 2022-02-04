@@ -57,7 +57,7 @@ The Application Runs on localhost:3000
 - [ ] Nextjs 
 - [ ] Typescript
 - [ ] GraphQL
-- [ ] Github GraphQL API
+- [ ] Github API
 - [ ] Apollo Client 
 
 ## Team 💕
@@ -69,9 +69,13 @@ The Application Runs on localhost:3000
 </table>
 
 ## Challenges we ran into 🥺  
+As we were using so many new technologies together, it was very overwhelming at first to figure what to learnt first, how to structure the project and so on but as a team we figured it all out. We also faced a lot of problems with the rate limiting issue of the github API. We then found out a way to make the requests authorised and increase the rate limit to some extent. In addition to that, being a group of javascript developers, it was a bit difficult to start writing code in typescript but we worked hard and got the job done.
 
 ## Accomplishments that we're proud of 🥳
+We were able to overcome all the challenges and were able to create a completely functional prototype. We were able to fetch the data from the github user's repository and display it in an attractive UI as we had envisioned. We are most proud of the fact that we learnt so many new tech stacks in just a matter of few days. 
 
 ## What we learned 🧐
+All the technologies, be it NextJs, GraphQL or Typescript, were very new to us. We learnt all three of them together while focusing on the core concepts of each technology. It was also our first time using the Github API. Since not many tutorials were present, we learnt the importance of documentation and how to use it effeciently. We have always used REST APIs to make API calls so trying out GraphQL was very fascinating and we really enjoyed using it.
 
 ## What's next for Github Stars 💫
+Going ahead, the Github Stars will have a lot of new features like providing much more information regarding forks, deployments and so on of the repositories. We will also include a direct option of sharing the stars to various social media platforms like Twitter, LinkedIn and so on. Lastly we also plan on creating a leaderboard which motivates the users to continue creating amazing projects.
