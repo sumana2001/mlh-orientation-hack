@@ -17,8 +17,14 @@
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid transparent;
-  border-image: linear-gradient(141.27deg,#ff904e -4.24%,#ff5982 21.25%,#ec68f4 44.33%,#79e2ff 83.46%);
-    border-image-slice: 1;
+  border-image: linear-gradient(
+    141.27deg,
+    #ff904e -4.24%,
+    #ff5982 21.25%,
+    #ec68f4 44.33%,
+    #79e2ff 83.46%
+  );
+  border-image-slice: 1;
   justify-content: center;
   align-items: center;
 }
@@ -38,16 +44,22 @@
   font-size: 1.5rem;
 }
 
-.line{
+.line {
   display: block;
-    width: calc(100% + 1.25rem);
-    height: 1px;
-    background: linear-gradient(141.27deg,#ff904e -4.24%,#ff5982 21.25%,#ec68f4 44.33%,#79e2ff 83.46%);
-    transform: scaleX(1);
-    transform-origin: 100% 0;
-    transition: transform 0.6s;
-    content: "";
-    margin-bottom:2rem;
+  width: calc(100% + 1.25rem);
+  height: 1px;
+  background: linear-gradient(
+    141.27deg,
+    #ff904e -4.24%,
+    #ff5982 21.25%,
+    #ec68f4 44.33%,
+    #79e2ff 83.46%
+  );
+  transform: scaleX(1);
+  transform-origin: 100% 0;
+  transition: transform 0.6s;
+  content: "";
+  margin-bottom: 2rem;
 }
 .grid {
   display: flex;
@@ -66,7 +78,7 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   float: left;
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 16px;
   margin: 1rem;
   max-width: 310px;
@@ -87,6 +99,7 @@
   width: 100%;
   vertical-align: top;
   position: relative;
+  min-width: 300px;
 }
 
 .card figcaption {
@@ -94,7 +107,7 @@
   position: absolute;
   bottom: 0%;
   z-index: 1;
-  width:100%;
+  width: 100%;
 }
 
 .card figcaption:before {
@@ -104,9 +117,19 @@
   left: 0;
   right: 0;
   background: #700877;
-  content: '';
-  background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
-  background: -webkit-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+  content: "";
+  background: -moz-linear-gradient(
+    90deg,
+    #700877 0%,
+    #ff2759 100%,
+    #ff2759 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #700877 0%,
+    #ff2759 100%,
+    #ff2759 100%
+  );
   background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
   opacity: 0.8;
   z-index: -1;
@@ -157,17 +180,17 @@
   border-radius: 40px;
   border: 1px solid #fff;
   background: transparent;
-  margin-bottom:1rem;
-  min-width:25vw;
+  margin-bottom: 1rem;
+  min-width: 25vw;
 }
 
 .form input {
-  color:#fff;
+  color: #fff;
   font-size: 1.2rem;
   padding: 12px 20px;
   width: 70%;
-  float: left;   
-  font: bold 13px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  float: left;
+  font: bold 13px "lucida sans", "trebuchet MS", "Tahoma";
   border: 0;
   background: transparent;
   border-radius: 40px;
@@ -175,18 +198,18 @@
 }
 
 .form input:focus {
-  color:#fff;
+  color: #fff;
   outline: 0;
-  border:0;
-  box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
+  border: 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8) inset;
 }
 
 .form input::-webkit-input-placeholder {
- color: #999;
- font-weight: normal;
- font-style: italic;
- padding-left: 10px;
- font-size:1rem;
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+  padding-left: 10px;
+  font-size: 1rem;
 }
 
 .form input:-moz-placeholder {
@@ -200,29 +223,40 @@
   font-weight: normal;
   font-style: italic;
   border-style: none;
-}   
+}
 
 .form button {
   overflow: visible;
   position: relative;
   float: right;
   cursor: pointer;
-  font-size:50px;
-  padding:0 15px;
-  font: 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  font-size: 50px;
+  padding: 0 15px;
+  font: 15px/40px "lucida sans", "trebuchet MS", "Tahoma";
   color: #fff;
   text-transform: uppercase;
   border-radius: 40px;
   background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
-  border:none;
-}  
+  border: none;
+}
 
-.form button:hover{    
-    background: linear-gradient(90deg, #4a064f 0%, #b8143a 100%, #ad1337 100%);
-}  
+.form button:hover {
+  background: linear-gradient(90deg, #4a064f 0%, #b8143a 100%, #ad1337 100%);
+}
 
-.name{
-  
+.name {
+  background: linear-gradient(90deg, #4a064f 0%, #b8143a 100%, #ad1337 100%);
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.name:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.count {
 }
 
 @media (max-width: 600px) {
@@ -230,10 +264,10 @@
     width: 100%;
     flex-direction: column;
   }
-  .card{
-    margin:10px auto;
+  .card {
+    margin: 10px auto;
   }
-  .form{
-    min-width:80vw;
+  .form {
+    min-width: 80vw;
   }
 }

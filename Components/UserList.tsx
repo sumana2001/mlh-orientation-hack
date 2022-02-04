@@ -1,21 +1,26 @@
-import { useContext } from 'react'
-import { DataContext } from '../pages'
-import User from './User'
-import styles from '../styles/Home.module.css'
+import { useContext } from "react";
+import { DataContext } from "../pages";
+import User from "./User";
+import styles from "../styles/Home.module.css";
 export default function UserList() {
-    let context = useContext(DataContext)
-    return (
-        <>
-           <h1 className={styles.name}>
-               {context.state?.nameWithOwner}
-           </h1>
-           <br/>
-           <div className={styles.url}>{context.state?.url}</div>
-           <div className={styles.count}>{context.state?.stargazerCount}</div>
-           <br/>
-           <div className={styles.grid}>
-            {context.state?.info?.map((user: any, key: any) => <User key={key} data={user} />)}
-            </div>
-        </>
-    )
+  let context = useContext(DataContext);
+  return (
+    <>
+      <a href={context.state?.url}>
+        <h1 className={styles.name}>
+          {context.state?.nameWithOwner}
+          <div className={styles.count}>
+            How many stars? {context.state?.stargazerCount}
+          </div>
+        </h1>
+      </a>
+
+      <br />
+      <div className={styles.grid}>
+        {context.state?.info?.map((user: any, key: any) => (
+          <User key={key} data={user} />
+        ))}
+      </div>
+    </>
+  );
 }
